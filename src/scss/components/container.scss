@@ -1,0 +1,38 @@
+.container {
+   width: 100%;
+   height: 100vh;
+   background-color: transparent;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   background-color: antiquewhite;
+
+   .left-page {
+      background-color: aqua;
+      transform: translateX(-70%) translateY(-10%);
+   }
+
+   .landing-page {
+      background-color: yellow;
+      z-index: 2;
+      width: 60%;
+      height: 90%;
+   }
+
+   .right-page {
+      background-color: red;
+      transform: translateX(70%) translateY(-10%);
+   }
+
+   .left-page,
+   .right-page {
+      width: 60%;
+      height: 90%;
+      position: absolute;
+   }
+}
