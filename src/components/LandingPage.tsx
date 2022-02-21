@@ -4,6 +4,8 @@ import Overview from './homeComponents/Overview';
 import Pagination from './Pagination';
 import Projects from './projects/Projects';
 
+import { motion } from 'framer-motion';
+
 const LandingPage = () => {
    const [actviveBtn, setActiveBtn] = useState(2);
 
