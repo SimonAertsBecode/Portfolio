@@ -6,35 +6,77 @@ import Projects from '../pages/Projects';
 
 import { motion } from 'framer-motion';
 
-const stateForAnimation = {
-   left: {
-      x: '-50vw',
-      scale: 0.8,
-      zIndex: 0,
-      transition: {
-         duration: 0.5,
+// const stateForAnimation = (x: number, scale: number, zIndex: number) => {
+//    return {
+//       left: {
+//          x: '-50vw',
+//          scale: 0.8,
+//          zIndex: 0,
+//          transition: {
+//             duration: 0.5,
+//          },
+//       },
+//       main: {
+//          x: '-0vw',
+//          scale: 1,
+//          zIndex: 2,
+//          transition: {
+//             duration: 0.5,
+//          },
+//       },
+//       right: {
+//          x: '50vw',
+//          scale: 0.8,
+//          zIndex: 0,
+//          transition: {
+//             duration: 0.5,
+//          },
+//       },
+//    };
+// };
+
+const stateForAnimation = [
+   {
+      name: 'left',
+      values: {
+         x: '-50vw',
+         scale: 0.8,
+         zIndex: 0,
+         transition: {
+            duration: 0.5,
+         },
       },
    },
-   main: {
-      x: '-0vw',
-      scale: 1,
-      zIndex: 2,
-      transition: {
-         duration: 0.5,
+   {
+      name: 'main',
+      values: {
+         x: '0vw',
+         scale: 1,
+         zIndex: 2,
+         transition: {
+            duration: 0.5,
+         },
       },
    },
-   right: {
-      x: '50vw',
-      scale: 0.8,
-      zIndex: 0,
-      transition: {
-         duration: 0.5,
+   {
+      name: 'right',
+      values: {
+         x: '50vw',
+         scale: 0.8,
+         zIndex: 0,
+         transition: {
+            duration: 0.5,
+         },
       },
    },
-};
+];
 
 const LandingPage = () => {
    const [actviveBtn, setActiveBtn] = useState(2);
+
+   const setStateForAnimation = () => {
+      stateForAnimation.map((item, index) => {});
+   };
 
    useLayoutEffect(() => {
       const { left, main, right } = stateForAnimation;
@@ -71,12 +113,10 @@ const LandingPage = () => {
       }
    }, [actviveBtn]);
 
-   console.log(stateForAnimation);
-
    return (
       <>
          <section className='container'>
-            <motion.section animate={stateForAnimation.left} className='left-page'>
+            {/* <motion.section animate={stateForAnimation[0].left} className='left-page'>
                <Curriculum />
             </motion.section>
             <motion.section animate={stateForAnimation.main} className='main-page'>
@@ -84,7 +124,17 @@ const LandingPage = () => {
             </motion.section>
             <motion.section animate={stateForAnimation.right} className='right-page'>
                <Projects />
-            </motion.section>
+            </motion.section> */}
+
+            {stateForAnimation.map((item, index) => {
+               const { values } = item;
+               if (actviveBtn === index) {
+                  values.x = '0vw';
+                  values.scale = 1;
+                  values.zIndex = 2;
+               }
+               return <motion.section animate={item.values} className={`${item.name}-page`}></motion.section>;
+            })}
             <Pagination setActiveBtn={setActiveBtn} activeBtn={actviveBtn} />
          </section>
       </>
