@@ -21,9 +21,9 @@ const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn }) => {
    };
    return (
       <section className='pagination'>
-         {renderButton(1, 'Curriculum')}
-         {renderButton(2, 'Overview')}
-         {renderButton(3, 'Projects')}
+         {renderButton(0, 'Curriculum')}
+         {renderButton(1, 'Overview')}
+         {renderButton(2, 'Projects')}
       </section>
    );
 };
