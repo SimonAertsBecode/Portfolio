@@ -1,44 +1,34 @@
 .container {
-   width: 100%;
+   width: 100vw;
    height: 100vh;
    background-color: transparent;
    margin: 0;
    padding: 0;
-   position: relative;
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
    overflow: hidden;
-   background-color: antiquewhite;
+   background-color: primaryColor(1);
 
-   // & > section {
-   //    width: 60%;
-   //    height: 100%;
-   // }
+   .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: thirdColor(1);
+      height: 95vh;
 
-   .left-page {
-      background-color: aqua;
-      width: 60%;
-      height: 90%;
-   }
+      & > section {
+         width: 70vw;
+         height: 90%;
+         position: absolute;
+         box-shadow: 0px 0px 20px 0px fourthColor(1);
+         background-color: secondColor(0.6);
+         backdrop-filter: blur(30px);
+      }
 
-   .main-page {
-      background-color: yellow;
-      width: 60%;
-      height: 90%;
-   }
-
-   .right-page {
-      background-color: red;
-      width: 60%;
-      height: 90%;
-   }
-
-   .left-page,
-   .right-page {
-      width: 60%;
-      height: 90%;
-      position: absolute;
+      .main-page {
+         border-radius: 88% 12% 87% 13% / 9% 93% 7% 91%;
+      }
    }
 }

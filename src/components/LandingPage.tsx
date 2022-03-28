@@ -42,40 +42,37 @@ const LandingPage = () => {
    return (
       <>
          <section className='container'>
-            {jsxComponents.map((item, index) => {
-               const animationVariants = {
-                  visible: {
-                     x: '0vw',
-                     scale: 1,
-                     zIndex: 2,
-                     transition: {
-                        duration: 0.8,
+            <section className='content'>
+               {jsxComponents.map((item, index) => {
+                  const animationVariants = {
+                     visible: {
+                        x: '0vw',
+                        scale: 1,
+                        zIndex: 2,
+                        transition: {
+                           duration: 0.8,
+                        },
+                        opacity: 1,
                      },
-                     opacity: 1,
-                  },
-                  hidden: {
-                     opacity: 0,
-                     x: 0,
-                  },
-               };
+                     hidden: {
+                        opacity: 0,
+                        x: 0,
+                     },
+                  };
 
-               const { page, content } = item;
-               const { visible } = animationVariants;
+                  const { page, content } = item;
+                  const { visible } = animationVariants;
 
-               if (actviveBtn === index) {
-                  visible.x = '0vw';
-                  visible.scale = 1;
-                  visible.zIndex = 2;
-               } else {
-                  animationLogic(visible, index);
-               }
+                  if (actviveBtn !== index) animationLogic(visible, index);
 
-               return (
-                  <motion.section key={page} initial='hidden' animate='visible' variants={animationVariants} className={`${page}-page`}>
-                     {content}
-                  </motion.section>
-               );
-            })}
+                  return (
+                     <motion.section key={page} initial='hidden' animate='visible' variants={animationVariants} className={`${page}-page`}>
+                        {content}
+                     </motion.section>
+                  );
+               })}
+            </section>
+
             <Pagination setActiveBtn={setActiveBtn} activeBtn={actviveBtn} />
          </section>
       </>

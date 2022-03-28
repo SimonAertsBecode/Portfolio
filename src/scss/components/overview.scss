@@ -1,0 +1,26 @@
+.overview {
+   .basic-infos {
+      margin-left: 2rem;
+
+      h1 {
+         font-size: 2rem;
+         padding: 0;
+         margin: 0;
+      }
+
+      img {
+         width: 20%;
+      }
+
+      .social-links {
+         display: flex;
+         flex-direction: row;
+         gap: 2rem;
+         a {
+            color: thirdColor(1);
+            background-color: fourthColor(1);
+            font-size: 2rem;
+         }
+      }
+   }
+}
