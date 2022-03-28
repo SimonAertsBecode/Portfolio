@@ -15,17 +15,6 @@ interface itemAnimation {
    };
 }
 
-const animationVariants = {
-   visible: {
-      x: '0vw',
-      scale: 1,
-      zIndex: 2,
-      transition: {
-         duration: 0.5,
-      },
-   },
-};
-
 const LandingPage = () => {
    const [actviveBtn, setActiveBtn] = useState(1);
 
@@ -54,8 +43,25 @@ const LandingPage = () => {
       <>
          <section className='container'>
             {jsxComponents.map((item, index) => {
+               const animationVariants = {
+                  visible: {
+                     x: '0vw',
+                     scale: 1,
+                     zIndex: 2,
+                     transition: {
+                        duration: 0.8,
+                     },
+                     opacity: 1,
+                  },
+                  hidden: {
+                     opacity: 0,
+                     x: 0,
+                  },
+               };
+
                const { page, content } = item;
                const { visible } = animationVariants;
+
                if (actviveBtn === index) {
                   visible.x = '0vw';
                   visible.scale = 1;
@@ -63,9 +69,9 @@ const LandingPage = () => {
                } else {
                   animationLogic(visible, index);
                }
+
                return (
-                  <motion.section key={page} animate='visible' variants={animationVariants} className={`${page}-page`}>
-                     {console.log(visible)}
+                  <motion.section key={page} initial='hidden' animate='visible' variants={animationVariants} className={`${page}-page`}>
                      {content}
                   </motion.section>
                );
