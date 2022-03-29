@@ -1,21 +1,11 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-
 const Overview = () => {
    return (
       <section className='overview'>
-         <section className='basic-infos'>
-            <h1>Simon Aerts</h1>
-            <img src='/selfie.jpeg' alt='Simon Aerts'></img>
-            <section className='social-links'>
-               <a rel='noreferrer' target='_blank' href='https://github.com/SimonAertsBecode'>
-                  <AiFillGithub />
-               </a>
-               <a rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/simon-aerts-86a204203/'>
-                  <AiFillLinkedin />
-               </a>
-            </section>
-         </section>
-         <section className='description'></section>
+         <h2>frontend - React developer</h2>
+         <p>
+            I am a junior frontend developer with an eagerness to embark on new projects. I am really passionate about javascript and especially with react and its ecosystem. Thanks to my background as a physiotherapist, I have developed the ability
+            to work in close collaboration with a multidisciplinary teams. Throughout my journey as a web developer, I have been able to work on differents projects that can be found on my github repository.
+         </p>
       </section>
    );
 };

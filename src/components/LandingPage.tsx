@@ -16,7 +16,7 @@ interface itemAnimation {
 }
 
 const LandingPage = () => {
-   const [actviveBtn, setActiveBtn] = useState(1);
+   const [actviveBtn, setActiveBtn] = useState(0);
 
    const jsxComponents = [
       { page: 'left', content: <Curriculum /> },
@@ -42,7 +42,7 @@ const LandingPage = () => {
    return (
       <>
          <section className='container'>
-            <section className='content'>
+            <main className='content'>
                {jsxComponents.map((item, index) => {
                   const animationVariants = {
                      visible: {
@@ -71,7 +71,7 @@ const LandingPage = () => {
                      </motion.section>
                   );
                })}
-            </section>
+            </main>
 
             <Pagination setActiveBtn={setActiveBtn} activeBtn={actviveBtn} />
          </section>
