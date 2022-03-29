@@ -28,7 +28,8 @@ const Curriculum = () => {
                <section className='climact'>
                   <h4>Internship as a React.js - Redux developer</h4>
                   <h5>
-                     Climact - 05/2021 <AiOutlineArrowRight /> 10/2021
+                     Climact <br />
+                     05/2021 <AiOutlineArrowRight /> 10/2021
                   </h5>
                   <ul>
                      <li>React</li>
@@ -41,7 +42,8 @@ const Curriculum = () => {
                <motion.section className='becode'>
                   <h4>web developer intensive training</h4>
                   <h5>
-                     BeCode - 01/2021 <AiOutlineArrowRight /> 08/2021
+                     BeCode <br />
+                     01/2021 <AiOutlineArrowRight /> 08/2021
                   </h5>
 
                   <ul>
@@ -56,7 +58,7 @@ const Curriculum = () => {
                <motion.section className='physiotherapy'>
                   <h4>Physiotherapist</h4>
                   <h5>
-                     few institutes - 01/2018 <AiOutlineArrowRight /> 08/2019
+                     few institutes <br /> 01/2018 <AiOutlineArrowRight /> 08/2019
                   </h5>
                   <p>Physiotherapist's specific skills</p>
                </motion.section>

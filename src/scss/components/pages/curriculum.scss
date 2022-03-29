@@ -20,6 +20,7 @@
 
       img {
          width: 70%;
+         border-radius: 20px;
       }
 
       .social-links {
@@ -34,11 +35,16 @@
             padding: 0.2rem;
             background-color: fourthColor(1);
             font-size: 2rem;
+            position: relative;
+            top: 0;
+            right: 5%;
+            transition: 0.5s ease-in;
          }
 
          a::before {
             content: '';
             position: absolute;
+            border-radius: 10px;
             top: 0;
             left: 0;
             right: 0;
@@ -71,16 +77,12 @@
       }
 
       .experience {
-         display: flex;
-         flex-direction: row;
-         align-items: flex-end;
-         flex: auto;
+         display: table;
 
          & > section {
-            flex: 1;
+            display: table-cell;
             padding: 0.5rem;
             box-shadow: 0 0 10px fourthColor(0.3);
-            height: fit-content;
 
             h4 {
                font-size: 1.1rem;
