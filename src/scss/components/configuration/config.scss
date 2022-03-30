@@ -18,5 +18,15 @@
    @return $result;
 }
 
+@mixin progressBar($color, $progress) {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: $progress;
+   background-color: $color;
+}
+
 //** font import
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');

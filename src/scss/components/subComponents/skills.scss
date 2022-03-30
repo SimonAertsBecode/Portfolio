@@ -1,0 +1,69 @@
+.skills {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+
+   & > section {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+      svg {
+         font-size: 1.8rem;
+      }
+
+      div {
+         border-radius: 20px;
+         border: solid 1px;
+         position: relative;
+         background-color: fourthColor(1);
+         width: 70%;
+         height: 0.8rem;
+      }
+   }
+
+   .react {
+      div::before {
+         @include progressBar(fourthColor(1), 30%);
+         box-shadow: 0 0 1em 0 fourthColor(1);
+      }
+   }
+   .js {
+      div::before {
+         @include progressBar(black, 20%);
+      }
+   }
+   .ts {
+      div::before {
+         @include progressBar(black, 40%);
+      }
+   }
+   .redux {
+      div::before {
+         @include progressBar(black, 30%);
+      }
+   }
+   .scss {
+      div::before {
+         @include progressBar(black, 30%);
+      }
+   }
+   .node {
+      div::before {
+         @include progressBar(black, 50%);
+      }
+   }
+   .mongo {
+      div::before {
+         @include progressBar(black, 60%);
+      }
+   }
+   .webpack {
+      div::before {
+         @include progressBar(black, 70%);
+      }
+   }
+}

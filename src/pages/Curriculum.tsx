@@ -1,5 +1,8 @@
-import React from 'react';
+//** React realated import */
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/ai';
+
+//** Components import */
+import Skills from '../components/subComponents/Skills';
 
 import { motion } from 'framer-motion';
 
@@ -18,8 +21,7 @@ const Curriculum = () => {
                </a>
             </section>
             <section className='skills'>
-               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores labore quae. Maiores quos commodi laudantium esse veniam facilis ex fugiat corporis! Quidem inventore impedit minus, ducimus nam iste. Dolor illo voluptatem
-               earum provident ea, deserunt temporibus in quos. A, laborum iusto! Nam voluptate dolorum minus. At, voluptatum dolorum. Architecto.
+               <Skills />
             </section>
          </section>
          <section className='journey'>
