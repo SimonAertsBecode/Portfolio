@@ -29,10 +29,10 @@ const Curriculum = () => {
             <section className='experience'>
                <section className='climact'>
                   <h4>Internship as a React.js - Redux developer</h4>
-                  <h5>
-                     Climact <br />
+                  <h5>Climact</h5>
+                  <p>
                      05/2021 <AiOutlineArrowRight /> 10/2021
-                  </h5>
+                  </p>
                   <ul>
                      <li>React</li>
                      <li>Redux</li>
@@ -41,32 +41,33 @@ const Curriculum = () => {
                      <li>ApexChart.js</li>
                   </ul>
                </section>
-               <motion.section className='becode'>
+               <section className='becode'>
                   <h4>web developer intensive training</h4>
-                  <h5>
-                     BeCode <br />
+                  <h5>BeCode</h5>
+                  <p>
                      01/2021 <AiOutlineArrowRight /> 08/2021
-                  </h5>
+                  </p>
 
                   <ul>
                      <li>React</li>
                      <li>JavaScript</li>
-                     <li>scss</li>
+                     <li>Scss</li>
                      <li>REST API</li>
                      <li>Node.js</li>
                      <li>MongoDB</li>
                   </ul>
-               </motion.section>
-               <motion.section className='physiotherapy'>
+               </section>
+               <section className='physiotherapy'>
                   <h4>Physiotherapist</h4>
-                  <h5>
-                     few institutes <br /> 01/2018 <AiOutlineArrowRight /> 08/2019
-                  </h5>
+                  <h5>few institutes</h5>
+                  <p>
+                     01/2018 <AiOutlineArrowRight /> 08/2019
+                  </p>
                   <p>Physiotherapist's specific skills</p>
-               </motion.section>
+               </section>
             </section>
+            <h2>Education</h2>
             <section className='education'>
-               <h2>Education</h2>
                <section className='--becode'>
                   <h3>Certification as web developer BeCode</h3>
                   <p>01/2021 - 08/2021</p>

@@ -19,51 +19,66 @@
          border-radius: 20px;
          border: solid 1px;
          position: relative;
-         background-color: fourthColor(1);
          width: 70%;
          height: 0.8rem;
+         transition: 1s ease-in-out;
+
+         // &::before {
+         //    content: '';
+         //    position: absolute;
+         //    top: 0;
+         //    right: 100%;
+         //    bottom: 0;
+         //    left: 0;
+         // }
+      }
+      span {
+         position: absolute;
+         border-radius: 20px;
+         width: 0;
+         height: 100%;
+         transition-duration: 1;
       }
    }
 
    .react {
-      div::before {
-         @include progressBar(fourthColor(1), 30%);
-         box-shadow: 0 0 1em 0 fourthColor(1);
+      span {
+         @include progressBar(#5ed3f3, 70%);
       }
    }
    .js {
-      div::before {
-         @include progressBar(black, 20%);
+      span {
+         @include progressBar(#efd81d, 60%);
       }
    }
    .ts {
-      div::before {
-         @include progressBar(black, 40%);
+      span {
+         @include progressBar(#2f74c0, 45%);
       }
    }
    .redux {
       div::before {
-         @include progressBar(black, 30%);
+         @include progressBar(#7c41be, 30%);
       }
    }
    .scss {
       div::before {
-         @include progressBar(black, 30%);
+         @include progressBar(#c76494, 30%);
       }
    }
    .node {
       div::before {
-         @include progressBar(black, 50%);
+         @include progressBar(#509941, 50%);
       }
    }
    .mongo {
       div::before {
-         @include progressBar(black, 60%);
+         @include progressBar(#4cab3d, 60%);
       }
    }
    .webpack {
       div::before {
-         @include progressBar(black, 70%);
+         @include progressBar(#2e6daa, 70%);
       }
    }
 }

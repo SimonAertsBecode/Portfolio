@@ -8,39 +8,55 @@ const Skills = () => {
       <>
          <section className='js'>
             <DiJavascript1 />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
          <section className='react'>
             <FaReact />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
          <section className='redux'>
             <SiRedux />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
          <section className='scss'>
             <DiSass />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
 
          <section className='ts'>
             <SiTypescript />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
 
          <section className='node'>
             <FaNodeJs />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
 
          <section className='mongo'>
             <SiMongodb />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
 
          <section className='webpack'>
             <SiWebpack />
-            <div></div>
+            <div>
+               <span></span>
+            </div>
          </section>
       </>
    );

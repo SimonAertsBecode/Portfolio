@@ -78,23 +78,46 @@
 
       .experience {
          display: table;
+         border-spacing: 1.5rem;
 
          & > section {
             display: table-cell;
-            padding: 0.5rem;
+            padding: 0 1rem;
             box-shadow: 0 0 10px fourthColor(0.3);
 
             h4 {
-               font-size: 1.1rem;
+               font-size: 1.3rem;
             }
 
             h5 {
-               font-size: 1rem;
+               font-size: 1.1rem;
+               padding-bottom: 1rem;
+               border-bottom: 1px solid fourthColor(0.4);
+            }
+
+            svg {
+               font-size: 1.3rem;
+               margin: 0 0.3em;
+            }
+
+            p {
+               display: flex;
+               align-items: center;
+            }
+
+            li {
+               font-size: 1.1rem;
+               margin-bottom: 0.3rem;
             }
          }
       }
       .education {
-         text-align: center;
+         display: flex;
+         margin: auto;
+         width: 50%;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
       }
    }
 }

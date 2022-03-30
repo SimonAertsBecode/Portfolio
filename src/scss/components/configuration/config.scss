@@ -19,13 +19,20 @@
 }
 
 @mixin progressBar($color, $progress) {
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: $progress;
+   width: $progress;
    background-color: $color;
+   box-shadow: 0 0 1em 0 $color, 0 0 0.8em 0 $color;
+   transition-duration: 1s;
+   animation: progressAnimation 1s ease-in-out;
+
+   @keyframes progressAnimation {
+      0% {
+         width: 0%;
+      }
+      100% {
+         width: $progress;
+      }
+   }
 }
 
 //** font import
