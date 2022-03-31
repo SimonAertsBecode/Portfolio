@@ -41,44 +41,46 @@
       }
    }
 
-   .react {
-      span {
-         @include progressBar(#5ed3f3, 70%);
-      }
-   }
    .js {
       span {
-         @include progressBar(#efd81d, 60%);
+         @include progressBar(#efd81d, 80%, 0s);
+      }
+   }
+   .react {
+      span {
+         @include progressBar(#5ed3f3, 70%, 0.3s);
+      }
+   }
+   .redux {
+      span {
+         @include progressBar(#7c41be, 70%, 0.6s);
+      }
+   }
+   .scss {
+      span {
+         @include progressBar(#c76494, 70%, 0.9s);
       }
    }
    .ts {
       span {
-         @include progressBar(#2f74c0, 45%);
+         @include progressBar(#2f74c0, 55%, 1.2s);
       }
    }
-   .redux {
-      div::before {
-         @include progressBar(#7c41be, 30%);
-      }
-   }
-   .scss {
-      div::before {
-         @include progressBar(#c76494, 30%);
-      }
-   }
+
    .node {
-      div::before {
-         @include progressBar(#509941, 50%);
+      span {
+         @include progressBar(#509941, 50%, 1.5s);
       }
    }
    .mongo {
-      div::before {
-         @include progressBar(#4cab3d, 60%);
+      span {
+         @include progressBar(#4cab3d, 45%, 1.8s);
       }
    }
    .webpack {
-      div::before {
-         @include progressBar(#2e6daa, 70%);
+      span {
+         width: 0;
+         @include progressBar(#2e6daa, 35%, 2.1s);
       }
    }
 }

@@ -63,12 +63,27 @@
       }
    }
 
+   ::-webkit-scrollbar {
+      width: 0.6rem;
+   }
+
+   ::-webkit-scrollbar-track {
+      background-color: firtsColor(1);
+      border-radius: 100vw;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background-color: secondColor(1);
+      border-radius: 100vw;
+   }
+
    .journey {
       display: flex;
       flex-direction: column;
       padding: 1rem;
       width: 100%;
       max-height: 100%;
+      overflow-x: auto;
 
       h2 {
          text-align: center;
@@ -106,8 +121,8 @@
             }
 
             li {
-               font-size: 1.1rem;
-               margin-bottom: 0.3rem;
+               // font-size: 1.1rem;
+               // margin-bottom: 0.3rem;
             }
          }
       }
