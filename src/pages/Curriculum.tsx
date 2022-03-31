@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 //** React realated import */
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/ai';
 
 //** Components import */
 import Skills from '../components/subComponents/Skills';
+import { UseStateContext } from '../context/UseStateContext';
 
 const Curriculum = () => {
-   const [showSkills, seShowSkills] = useState(false);
+   const skillsContext = useContext(UseStateContext);
+   let showSkills = skillsContext?.showSkills;
 
    return (
       <section className='curriculum'>

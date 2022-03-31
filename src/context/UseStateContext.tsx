@@ -1,10 +1,17 @@
-import { createContext, ReactChild, ReactFragment, ReactPortal } from 'react';
+import { createContext, Dispatch, ReactChild, SetStateAction, useMemo } from 'react';
 import { useState } from 'react';
 
-export const UseStateContext = createContext(false);
+interface skillsInterface {
+   showSkills: boolean;
+   setShowSkills: Dispatch<SetStateAction<boolean>>;
+}
 
-export const UseStateProvider = (props: { children: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined }) => {
+export const UseStateContext = createContext<skillsInterface | null>(null);
+
+export const UseStateProvider = (props: { children: ReactChild }) => {
    const [showSkills, setShowSkills] = useState(false);
 
-   return <UseStateContext.Provider value={[showSkills, setShowSkills]}>{props.children}</UseStateContext.Provider>;
+   const providerSkills = useMemo(() => ({ showSkills, setShowSkills }), [showSkills, setShowSkills]);
+
+   return <UseStateContext.Provider value={providerSkills}>{props.children}</UseStateContext.Provider>;
 };

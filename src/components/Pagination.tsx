@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction, useContext } from 'react';
+import { UseStateContext } from '../context/UseStateContext';
 
 interface props {
    activeBtn: number;
@@ -6,6 +7,8 @@ interface props {
 }
 
 const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn }) => {
+   const skillsContext = useContext(UseStateContext);
+
    const renderButton = (value: number, name: string) => {
       return (
          <button
@@ -13,6 +16,7 @@ const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn }) => {
             className={activeBtn === value ? 'btn-active' : undefined}
             onClick={() => {
                setActiveBtn(value);
+               value === 0 && skillsContext?.setShowSkills(true);
             }}
          >
             {name}
