@@ -19,9 +19,9 @@ const LandingPage = () => {
    const [actviveBtn, setActiveBtn] = useState(1);
 
    const jsxComponents = [
-      { page: 'left', content: <Curriculum /> },
-      { page: 'main', content: <Overview /> },
-      { page: 'right', content: <Projects /> },
+      { title: 'Curriculum', content: <Curriculum /> },
+      { title: 'Overview', content: <Overview /> },
+      { title: 'Projects', content: <Projects /> },
    ];
 
    const animationLogic = (visible: itemAnimation, index: number) => {
@@ -60,20 +60,20 @@ const LandingPage = () => {
                      },
                   };
 
-                  const { page, content } = item;
+                  const { title, content } = item;
                   const { visible } = animationVariants;
 
                   if (actviveBtn !== index) animationLogic(visible, index);
 
                   return (
-                     <motion.section key={page} initial='hidden' animate='visible' variants={animationVariants} className={`${page}-page`}>
+                     <motion.section key={title} initial='hidden' animate='visible' variants={animationVariants} className={`${title}-page`}>
                         {content}
                      </motion.section>
                   );
                })}
             </main>
 
-            <Pagination setActiveBtn={setActiveBtn} activeBtn={actviveBtn} />
+            <Pagination jsxComponents={jsxComponents} setActiveBtn={setActiveBtn} activeBtn={actviveBtn} />
          </section>
       </>
    );

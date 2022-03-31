@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 //** React realated import */
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/ai';

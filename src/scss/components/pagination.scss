@@ -1,10 +1,36 @@
 .pagination {
    display: flex;
    justify-content: center;
+
    button {
-      margin: 0 10px;
-      padding: 5px;
-      background-color: antiquewhite;
+      margin: 10px 20px;
+      padding: 0px;
+      background-color: transparent;
+      color: white;
+      border: none;
       cursor: pointer;
+      font-size: 2rem;
+      font-family: 'La Belle Aurore', cursive;
+      transition: 0.5s;
+
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         height: 2px;
+         background-color: fourthColor(0.6);
+         transform: scaleX(0);
+         transition: transform 0.5s ease-in-out;
+      }
+
+      &.active {
+         transform: translateY(-20px) scale(1.2);
+
+         &::before {
+            transform: scaleX(1);
+         }
+      }
    }
 }

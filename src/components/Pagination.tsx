@@ -2,18 +2,24 @@ import React, { Dispatch, SetStateAction, useContext } from 'react';
 import { UseStateContext } from '../context/UseStateContext';
 
 interface props {
+   jsxComponents: components[];
    activeBtn: number;
    setActiveBtn: Dispatch<SetStateAction<number>>;
 }
 
-const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn }) => {
+interface components {
+   title: string;
+   content: JSX.Element;
+}
+
+const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn, jsxComponents }) => {
    const skillsContext = useContext(UseStateContext);
 
    const renderButton = (value: number, name: string) => {
       return (
          <button
             key={value}
-            className={activeBtn === value ? 'btn-active' : undefined}
+            className={activeBtn === value ? 'active' : undefined}
             onClick={() => {
                setActiveBtn(value);
                value === 0 && skillsContext?.setShowSkills(true);
@@ -25,9 +31,9 @@ const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn }) => {
    };
    return (
       <section className='pagination'>
-         {renderButton(0, 'Curriculum')}
-         {renderButton(1, 'Overview')}
-         {renderButton(2, 'Projects')}
+         {jsxComponents.map((item, index) => {
+            return renderButton(index, item.title);
+         })}
       </section>
    );
 };
