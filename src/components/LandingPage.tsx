@@ -16,7 +16,7 @@ interface itemAnimation {
 }
 
 const LandingPage = () => {
-   const [actviveBtn, setActiveBtn] = useState(0);
+   const [actviveBtn, setActiveBtn] = useState(1);
 
    const jsxComponents = [
       { page: 'left', content: <Curriculum /> },

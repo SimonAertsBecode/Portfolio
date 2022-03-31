@@ -1,12 +1,14 @@
+import { useState } from 'react';
+
 //** React realated import */
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/ai';
 
 //** Components import */
 import Skills from '../components/subComponents/Skills';
 
-import { motion } from 'framer-motion';
-
 const Curriculum = () => {
+   const [showSkills, seShowSkills] = useState(false);
+
    return (
       <section className='curriculum'>
          <section className='basic-infos'>
@@ -20,9 +22,7 @@ const Curriculum = () => {
                   <AiFillLinkedin />
                </a>
             </section>
-            <section className='skills'>
-               <Skills />
-            </section>
+            <section className='skills'>{showSkills && <Skills />}</section>
          </section>
          <section className='journey'>
             <h2>Professional experience</h2>
