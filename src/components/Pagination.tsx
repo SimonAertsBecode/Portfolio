@@ -22,7 +22,7 @@ const Pagination: React.FC<props> = ({ setActiveBtn, activeBtn, jsxComponents })
             className={activeBtn === value ? 'active' : undefined}
             onClick={() => {
                setActiveBtn(value);
-               value === 0 && skillsContext?.setShowSkills(true);
+               name === 'Resume' && skillsContext?.setShowSkills(true);
             }}
          >
             {name}

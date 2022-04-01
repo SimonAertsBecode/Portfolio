@@ -12,7 +12,7 @@ const Curriculum = () => {
    let showSkills = skillsContext?.showSkills;
 
    return (
-      <section className='curriculum'>
+      <section className='resume'>
          <section className='basic-infos'>
             <h1>Simon Aerts</h1>
             <img src='/selfie.jpeg' alt='Simon Aerts'></img>
