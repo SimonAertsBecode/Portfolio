@@ -1,34 +1,25 @@
-@keyframes spin {
-   0% {
-      transform: rotate(0);
-   }
+// @keyframes spin {
+//    0% {
+//       transform: rotate(0);
+//    }
 
-   100% {
-      transform: rotate(360deg);
-   }
-}
+//    100% {
+//       transform: rotate(360deg);
+//    }
+// }
 
 .overview {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 10vh;
+
    .head {
-      position: relative;
-      background-color: red;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      h2 {
-         margin-bottom: 0;
-         margin: 3rem 0 0 0;
-         padding-bottom: 0;
-      }
-
-      img {
-         position: absolute;
-         height: 50vmin;
-         top: 7vh;
-         animation: spin 10s linear infinite backwards;
-      }
    }
 }

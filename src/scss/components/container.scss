@@ -28,5 +28,13 @@
          background-color: secondColor(0.4);
          backdrop-filter: blur(30px);
       }
+
+      .overview-page {
+         box-shadow: none;
+         background-color: transparent;
+         backdrop-filter: none;
+         border-radius: 0;
+         width: 40vw;
+      }
    }
 }

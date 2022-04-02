@@ -66,7 +66,7 @@ const LandingPage = () => {
                   if (actviveBtn !== index) animationLogic(visible, index);
 
                   return (
-                     <motion.section key={title} initial='hidden' animate='visible' variants={animationVariants} className={`${title}-page`}>
+                     <motion.section key={title} initial='hidden' animate='visible' variants={animationVariants} className={`${title.toLowerCase()}-page`}>
                         {content}
                      </motion.section>
                   );
