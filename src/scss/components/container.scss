@@ -1,7 +1,6 @@
 .container {
    width: 100vw;
    height: 100vh;
-   background-color: transparent;
    margin: 0;
    padding: 0;
    display: flex;
@@ -30,11 +29,12 @@
       }
 
       .overview-page {
-         box-shadow: none;
          background-color: transparent;
+         box-shadow: none;
          backdrop-filter: none;
-         border-radius: 0;
-         width: 40vw;
+         display: flex;
+         align-items: center;
+         justify-content: center;
       }
    }
 }
