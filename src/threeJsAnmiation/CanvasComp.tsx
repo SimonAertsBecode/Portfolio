@@ -1,8 +1,10 @@
-import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Suspense, useRef } from 'react';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as three from 'three';
 import { softShadows } from '@react-three/drei';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
 /*
 geometry <boxBufferGeometry> === type of geometries 'https://threejs.org/docs/#api/en/geometries'
 material <MeshWobbleMaterial> === type of material 'https://threejs.org/docs/#api/en/materials/Material'
@@ -26,32 +28,29 @@ Mesh
 
 softShadows();
 
-const Sphere = () => {
-   const sphere = useRef<three.Mesh>(null);
-
-   useFrame(() => {
-      sphere.current!.rotation.x += 0.01;
-      sphere.current!.rotation.y += 0.01;
-   });
-
+const ArcCircleGltf = () => {
+   const gltf = useLoader(GLTFLoader, '/assets/gltf/portfolio.gltf');
    return (
-      <mesh ref={sphere} castShadow>
-         <sphereBufferGeometry attach='geometry' args={[1.5, 30, 30]} />
-         <meshStandardMaterial attach='material' color='rgba(98, 187, 193, 1)' />
-      </mesh>
+      <Suspense fallback={null}>
+         <primitive object={gltf.scene} />
+      </Suspense>
    );
 };
 
-// const ArcCercle = () => {
-//    const arcCercle = useRef<three.Mesh>(null);
+const ArcCircle = () => {
+   const reactgltf = useRef<three.Mesh>();
 
-//    return (
-//       <mesh ref={arcCercle}>
-//          <sphereBufferGeometry attach='geometry' args={[1, 32, 30]} />
-//          <meshStandardMaterial attach='material' color='rgba(98, 187, 193, 1)' />
-//       </mesh>
-//    );
-// };
+   useFrame(() => {
+      reactgltf.current!.rotation.x += 0.003;
+      reactgltf.current!.rotation.y += 0.003;
+   });
+
+   return (
+      <mesh ref={reactgltf} position={[0, 0, 0]} castShadow>
+         <ArcCircleGltf />
+      </mesh>
+   );
+};
 
 const Plane = () => {
    const plane = useRef<three.Mesh>(null);
@@ -59,15 +58,15 @@ const Plane = () => {
    return (
       <mesh ref={plane} rotation={[-Math.PI / 2, 0, 0]} position={[0, -4, 0]} receiveShadow>
          <planeBufferGeometry attach='geometry' args={[100, 100]} />
-         <shadowMaterial attach='material' color='white' opacity={0.2} />
+         <shadowMaterial attach='material' color='red' opacity={0.2} />
       </mesh>
    );
 };
 
 const CanvasComp = () => {
    return (
-      <Canvas shadows camera={{ position: [5, 1, 10], fov: 60 }}>
-         <ambientLight intensity={0.8} />
+      <Canvas shadows camera={{ position: [5, 0, 5], fov: 5 }}>
+         <ambientLight intensity={0.1} />
          <directionalLight
             position={[5, 5, 4]}
             intensity={1}
@@ -77,8 +76,8 @@ const CanvasComp = () => {
             shadow-camera-far={50}
             shadow-camera-left={-10}
          />
-         <pointLight position={[1, 1, 0]} />
-         <Sphere />
+         <pointLight position={[1, 1, 0]} intensity={1} />
+         <ArcCircle />
          <Plane />
          <OrbitControls />
       </Canvas>

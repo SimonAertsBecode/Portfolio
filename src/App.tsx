@@ -1,10 +1,13 @@
 import Routes from './routes/Routing';
 import { UseStateProvider } from './context/UseStateContext';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
    return (
       <UseStateProvider>
-         <Routes />
+         <BrowserRouter>
+            <Routes />
+         </BrowserRouter>
       </UseStateProvider>
    );
 }
