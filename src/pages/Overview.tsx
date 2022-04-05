@@ -1,4 +1,4 @@
-import CanvasComp from '../threeJsAnmiation/CanvasComp';
+import CanvasComp from '../threeJsAnimation/CanvasComp';
 import { motion } from 'framer-motion';
 
 const titleAnimation = {
