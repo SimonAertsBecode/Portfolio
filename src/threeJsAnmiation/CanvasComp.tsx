@@ -28,6 +28,7 @@ Mesh
 
 softShadows();
 
+//** React gltf created with vectary */
 const ArcCircleGltf = () => {
    const gltf = useLoader(GLTFLoader, '/assets/gltf/portfolio.gltf');
    return (
@@ -38,15 +39,15 @@ const ArcCircleGltf = () => {
 };
 
 const ArcCircle = () => {
-   const reactgltf = useRef<three.Mesh>();
+   const reactGltf = useRef<three.Mesh>();
 
    useFrame(() => {
-      reactgltf.current!.rotation.x += 0.003;
-      reactgltf.current!.rotation.y += 0.003;
+      reactGltf.current!.rotation.x += 0.003;
+      reactGltf.current!.rotation.y += 0.003;
    });
 
    return (
-      <mesh ref={reactgltf} position={[0, 0, 0]} castShadow>
+      <mesh ref={reactGltf} position={[0, 0, 0]} castShadow>
          <ArcCircleGltf />
       </mesh>
    );
@@ -65,7 +66,7 @@ const Plane = () => {
 
 const CanvasComp = () => {
    return (
-      <Canvas shadows camera={{ position: [5, 0, 5], fov: 5 }}>
+      <Canvas shadows camera={{ position: [5, 0, 5], fov: 4 }}>
          <ambientLight intensity={0.1} />
          <directionalLight
             position={[5, 5, 4]}
