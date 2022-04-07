@@ -3,8 +3,7 @@ import Curriculum from '../pages/Resume';
 import Overview from '../pages/Overview';
 import Pagination from './Pagination';
 import Projects from '../pages/Projects';
-
-import { motion } from 'framer-motion';
+import MemoContent from './Content';
 
 interface itemAnimation {
    x: string;
@@ -24,7 +23,11 @@ const LandingPage = () => {
       { title: 'Projects', content: <Projects /> },
    ];
 
-   const animationLogic = (visible: itemAnimation, index: number) => {
+   window.addEventListener('load', () => {
+      console.log('page loaded');
+   });
+
+   const paginationLogic = (visible: itemAnimation, index: number) => {
       const isPositive = index < actviveBtn ? false : true;
       const diff = Math.abs(actviveBtn - index);
 
@@ -63,12 +66,12 @@ const LandingPage = () => {
                   const { title, content } = item;
                   const { visible } = animationVariants;
 
-                  if (actviveBtn !== index) animationLogic(visible, index);
+                  if (actviveBtn !== index) paginationLogic(visible, index);
 
                   return (
-                     <motion.section key={title} initial='hidden' animate='visible' variants={animationVariants} className={`${title.toLowerCase()}-page`}>
+                     <MemoContent key={title} variants={animationVariants} className={`${title.toLowerCase()}-page`}>
                         {content}
-                     </motion.section>
+                     </MemoContent>
                   );
                })}
             </main>
