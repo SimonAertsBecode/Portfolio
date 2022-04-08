@@ -1,0 +1,274 @@
+{
+   "asset": { "version": "2.0", "generator": "VECTARY" },
+   "nodes": [
+      {
+         "translation": [0.01329893548235959, 0.010184240564362313, 0.9648609516060234],
+         "scale": [1, 1, 1],
+         "rotation": [1.1102230246251565e-16, 0, 1.1102230246251565e-16, 1],
+         "name": "Camera",
+         "camera": 0
+      },
+      {
+         "translation": [0.002276787042420934, -0.008785483515159512, -0.0020430485156022003],
+         "scale": [0.001, 0.001, 0.001],
+         "rotation": [0.46509017042839007, -0.5764128569927074, -0.3452355282381875, 0.5764128569927075],
+         "name": "Point Light",
+         "extensions": { "KHR_lights_punctual": { "light": 0 } }
+      },
+      {
+         "translation": [0.0029017884941031726, -0.05329622626628765, -0.005648928209249149],
+         "scale": [0.001, 0.0009999999999999998, 0.0009999999999999998],
+         "rotation": [-0.7042497214661939, 0, 0, 0.7099523433405857],
+         "name": "Sphere 1",
+         "mesh": 0
+      },
+      {
+         "translation": [0.001939459207159902, -0.0035713249587637297, 0.0032205079082254094],
+         "scale": [0.0026239090158665557, 0.00325961657268562, 0.00325961657268563],
+         "rotation": [-0.22767383941334884, 0.8884144314881871, -0.3885670383870787, -0.08888237985900507],
+         "name": "Torus 2",
+         "mesh": 1
+      },
+      {
+         "translation": [-0.006095966032135491, -0.006915678417472148, 0.0032051855711062427],
+         "scale": [0.0026239090158665527, 0.0032596165726856197, 0.0032596165726856267],
+         "rotation": [-0.8705807593245558, 0.2825736528635628, 0.09222590759312842, 0.392091384972746],
+         "name": "Torus 2",
+         "mesh": 2
+      },
+      {
+         "translation": [0.0004902445121253032, -0.005219302614843196, 0.003941877193760424],
+         "scale": [0.0026239090158665527, 0.0032596165726856197, 0.0032596165726856267],
+         "rotation": [-0.7071401628116325, 0.7065004404450275, -0.022954939960470322, 0.016822262663829357],
+         "name": "Torus 2",
+         "mesh": 3
+      }
+   ],
+   "cameras": [
+      {
+         "name": "Camera",
+         "type": "orthographic",
+         "extras": { "targetDistance": 0.8987116084960286 },
+         "orthographic": { "xmag": 0.8984208102386168, "ymag": 0.566725363420562, "zfar": 50, "znear": 0.001 }
+      }
+   ],
+   "extensions": {
+      "KHR_lights_punctual": {
+         "lights": [{ "name": "Point Light", "type": "point", "intensity": 0.4, "range": 10000, "color": [1, 1, 1] }]
+      }
+   },
+   "materials": [
+      {
+         "pbrMetallicRoughness": {
+            "baseColorFactor": [1, 1, 1, 1],
+            "baseColorTexture": {
+               "index": 0,
+               "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+               "texCoord": 0
+            },
+            "metallicRoughnessTexture": {
+               "index": 2,
+               "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+               "texCoord": 0
+            },
+            "metallicFactor": 1,
+            "roughnessFactor": 1
+         },
+         "name": "Concrete 1",
+         "normalTexture": {
+            "index": 1,
+            "scale": 1,
+            "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+            "texCoord": 0
+         },
+         "emissiveFactor": [0.2941176470588235, 0.2952941176470588, 0.2964705882352941],
+         "extensions": {},
+         "alphaMode": "OPAQUE",
+         "doubleSided": false
+      },
+      {
+         "pbrMetallicRoughness": {
+            "baseColorFactor": [0.14799802298268516, 0.7592995506950911, 1, 1],
+            "metallicRoughnessTexture": {
+               "index": 4,
+               "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+               "texCoord": 0
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 1
+         },
+         "name": "Subsurface Textured 4",
+         "normalTexture": {
+            "index": 3,
+            "scale": 1,
+            "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+            "texCoord": 0
+         },
+         "emissiveFactor": [0, 0, 0],
+         "extensions": {},
+         "alphaMode": "OPAQUE",
+         "doubleSided": false
+      },
+      {
+         "pbrMetallicRoughness": {
+            "baseColorFactor": [0.14799802298268516, 0.7592995506950911, 1, 1],
+            "metallicRoughnessTexture": {
+               "index": 4,
+               "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+               "texCoord": 0
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 1
+         },
+         "name": "Subsurface Textured 5",
+         "normalTexture": {
+            "index": 3,
+            "scale": 1,
+            "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+            "texCoord": 0
+         },
+         "emissiveFactor": [0, 0, 0],
+         "extensions": {},
+         "alphaMode": "OPAQUE",
+         "doubleSided": false
+      },
+      {
+         "pbrMetallicRoughness": {
+            "baseColorFactor": [0.14799802298268516, 0.7592995506950911, 1, 1],
+            "metallicRoughnessTexture": {
+               "index": 4,
+               "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+               "texCoord": 0
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 1
+         },
+         "name": "Subsurface Textured 6",
+         "normalTexture": {
+            "index": 3,
+            "scale": 1,
+            "extensions": { "KHR_texture_transform": { "offset": [0, 0], "scale": [1, 1], "rotation": 0 } },
+            "texCoord": 0
+         },
+         "emissiveFactor": [0, 0, 0],
+         "extensions": {},
+         "alphaMode": "OPAQUE",
+         "doubleSided": false
+      }
+   ],
+   "textures": [
+      { "sampler": 0, "source": 0 },
+      { "sampler": 0, "source": 1 },
+      { "sampler": 0, "source": 2 },
+      { "sampler": 0, "source": 3 },
+      { "sampler": 0, "source": 4 }
+   ],
+   "images": [
+      { "uri": "5a35bd0b2e1828.jpg", "mimeType": "image/jpeg" },
+      { "uri": "5a35bd0b2e1828_1.jpg", "mimeType": "image/jpeg" },
+      { "uri": "Concrete_006_Metalic&Concrete_006_Roughness.jpg", "mimeType": "image/jpeg" },
+      { "uri": "Plastic_005_NormalMap.jpg", "mimeType": "image/jpeg" },
+      { "uri": "metallicTexture&Plastic_005_Roughness.jpg", "mimeType": "image/jpeg" }
+   ],
+   "samplers": [{ "wrapS": 10497, "wrapT": 10497 }],
+   "meshes": [
+      {
+         "primitives": [
+            { "mode": 4, "attributes": { "POSITION": 1, "NORMAL": 2, "TEXCOORD_0": 3 }, "material": 0, "indices": 0 }
+         ]
+      },
+      {
+         "primitives": [
+            { "mode": 4, "attributes": { "POSITION": 5, "NORMAL": 6, "TEXCOORD_0": 7 }, "material": 1, "indices": 4 }
+         ]
+      },
+      {
+         "primitives": [
+            { "mode": 4, "attributes": { "POSITION": 9, "NORMAL": 10, "TEXCOORD_0": 11 }, "material": 2, "indices": 8 }
+         ]
+      },
+      {
+         "primitives": [
+            {
+               "mode": 4,
+               "attributes": { "POSITION": 13, "NORMAL": 14, "TEXCOORD_0": 15 },
+               "material": 3,
+               "indices": 12
+            }
+         ]
+      }
+   ],
+   "accessors": [
+      { "bufferView": 0, "byteOffset": 0, "componentType": 5125, "count": 11904, "type": "SCALAR" },
+      {
+         "bufferView": 1,
+         "byteOffset": 0,
+         "componentType": 5126,
+         "count": 2143,
+         "max": [48, 48, 96],
+         "min": [-48, -48, 0],
+         "type": "VEC3"
+      },
+      { "bufferView": 2, "byteOffset": 0, "componentType": 5126, "count": 2143, "type": "VEC3" },
+      { "bufferView": 3, "byteOffset": 0, "componentType": 5126, "count": 2143, "type": "VEC2" },
+      { "bufferView": 4, "byteOffset": 0, "componentType": 5125, "count": 12288, "type": "SCALAR" },
+      {
+         "bufferView": 5,
+         "byteOffset": 0,
+         "componentType": 5126,
+         "count": 2145,
+         "max": [68.5999984741211, 29.399999618530273, 8.399999618530273],
+         "min": [-68.5999984741211, -29.39999771118164, -1.3999998569488525],
+         "type": "VEC3"
+      },
+      { "bufferView": 6, "byteOffset": 0, "componentType": 5126, "count": 2145, "type": "VEC3" },
+      { "bufferView": 7, "byteOffset": 0, "componentType": 5126, "count": 2145, "type": "VEC2" },
+      { "bufferView": 8, "byteOffset": 0, "componentType": 5125, "count": 12288, "type": "SCALAR" },
+      {
+         "bufferView": 9,
+         "byteOffset": 0,
+         "componentType": 5126,
+         "count": 2145,
+         "max": [68.5999984741211, 29.399999618530273, 8.399999618530273],
+         "min": [-68.5999984741211, -29.39999771118164, -1.3999998569488525],
+         "type": "VEC3"
+      },
+      { "bufferView": 10, "byteOffset": 0, "componentType": 5126, "count": 2145, "type": "VEC3" },
+      { "bufferView": 11, "byteOffset": 0, "componentType": 5126, "count": 2145, "type": "VEC2" },
+      { "bufferView": 12, "byteOffset": 0, "componentType": 5125, "count": 12288, "type": "SCALAR" },
+      {
+         "bufferView": 13,
+         "byteOffset": 0,
+         "componentType": 5126,
+         "count": 2145,
+         "max": [68.5999984741211, 29.399999618530273, 8.399999618530273],
+         "min": [-68.5999984741211, -29.39999771118164, -1.3999998569488525],
+         "type": "VEC3"
+      },
+      { "bufferView": 14, "byteOffset": 0, "componentType": 5126, "count": 2145, "type": "VEC3" },
+      { "bufferView": 15, "byteOffset": 0, "componentType": 5126, "count": 2145, "type": "VEC2" }
+   ],
+   "bufferViews": [
+      { "buffer": 0, "byteOffset": 0, "byteLength": 47616, "target": 34963 },
+      { "buffer": 0, "byteOffset": 47616, "byteLength": 25716, "target": 34962 },
+      { "buffer": 0, "byteOffset": 73332, "byteLength": 25716, "target": 34962 },
+      { "buffer": 0, "byteOffset": 99048, "byteLength": 17144, "target": 34962 },
+      { "buffer": 0, "byteOffset": 116192, "byteLength": 49152, "target": 34963 },
+      { "buffer": 0, "byteOffset": 165344, "byteLength": 25740, "target": 34962 },
+      { "buffer": 0, "byteOffset": 191084, "byteLength": 25740, "target": 34962 },
+      { "buffer": 0, "byteOffset": 216824, "byteLength": 17160, "target": 34962 },
+      { "buffer": 0, "byteOffset": 233984, "byteLength": 49152, "target": 34963 },
+      { "buffer": 0, "byteOffset": 283136, "byteLength": 25740, "target": 34962 },
+      { "buffer": 0, "byteOffset": 308876, "byteLength": 25740, "target": 34962 },
+      { "buffer": 0, "byteOffset": 334616, "byteLength": 17160, "target": 34962 },
+      { "buffer": 0, "byteOffset": 351776, "byteLength": 49152, "target": 34963 },
+      { "buffer": 0, "byteOffset": 400928, "byteLength": 25740, "target": 34962 },
+      { "buffer": 0, "byteOffset": 426668, "byteLength": 25740, "target": 34962 },
+      { "buffer": 0, "byteOffset": 452408, "byteLength": 17160, "target": 34962 }
+   ],
+   "scene": 0,
+   "scenes": [{ "nodes": [0, 1, 2, 3, 4, 5], "name": "portfolio" }],
+   "extensionsUsed": ["KHR_texture_transform", "KHR_lights_punctual"],
+   "extensionsRequired": ["KHR_lights_punctual"],
+   "buffers": [{ "byteLength": 469568, "uri": "portfolio.bin" }]
+}
