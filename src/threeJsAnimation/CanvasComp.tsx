@@ -30,7 +30,7 @@ softShadows();
 
 //** React gltf created with vectary */
 const ArcCircleGltf = () => {
-   const gltf = useLoader(GLTFLoader, '/assets/gltf/portfolio.gltf');
+   const gltf = useLoader(GLTFLoader, '/assets/gltf/portfolio.glb');
    return (
       <Suspense fallback={null}>
          <primitive object={gltf.scene} />
