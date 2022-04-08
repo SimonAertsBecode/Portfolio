@@ -54,6 +54,7 @@ const LandingPage = () => {
                         zIndex: 2,
                         transition: {
                            duration: 0.8,
+                           delay: 0,
                         },
                         opacity: 1,
                      },

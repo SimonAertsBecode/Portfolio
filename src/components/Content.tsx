@@ -8,6 +8,7 @@ type variantsInterface = {
       zIndex: number;
       transition: {
          duration: number;
+         delay: number;
       };
    };
    hidden: {

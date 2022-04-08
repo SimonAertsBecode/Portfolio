@@ -1,12 +1,12 @@
 import { Route, Routes as Routing } from 'react-router-dom';
 
 //** Import components
-import LandingPage from '../components/LandingPage'
+import TransitionLogic from '../components/TransitionLogic';
 
 const Routes = () => {
    return (
       <Routing>
-         <Route index element={<LandingPage />} />
+         <Route index element={<TransitionLogic />} />
          <Route
             path='github-account'
             element={() => {
