@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LandingPage from './LandingPage';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,20 +10,17 @@ const transitionVariant = {
       zIndex: 1000,
    },
    visible: {
-      scale: 1,
       opacity: 1,
       zIndex: 1000,
    },
    exit: {
-      scale: 0,
-      y: '-100vh',
-      opacity: 0.3,
-      transition: { duration: 2.5 },
+      opacity: 0,
+      transition: { duration: 2 },
    },
 };
 
 const TransitionLogic = () => {
-   const [transition, setTransition] = useState(false);
+   const [transition, setTransition] = useState(true);
 
    setTimeout(() => {
       setTransition(true);

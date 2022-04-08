@@ -5,10 +5,12 @@
    flex-direction: column;
    height: 100%;
    width: 100%;
+   transform: translateY(-1rem);
 
    .head {
+      margin: 0;
       text-align: center;
-      transform: translateY(4rem);
+      // transform: translateY(1rem);
 
       h1 {
          margin-bottom: 0;

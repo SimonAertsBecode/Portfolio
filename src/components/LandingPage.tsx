@@ -3,7 +3,7 @@ import Curriculum from '../pages/Resume';
 import Overview from '../pages/Overview';
 import Pagination from './Pagination';
 import Projects from '../pages/Projects';
-import MemoContent from './Content';
+import Content from './Content';
 
 interface itemAnimation {
    x: string;
@@ -70,9 +70,9 @@ const LandingPage = () => {
                   if (actviveBtn !== index) paginationLogic(visible, index);
 
                   return (
-                     <MemoContent key={title} variants={animationVariants} className={`${title.toLowerCase()}-page`}>
+                     <Content key={title} variants={animationVariants} className={`${title.toLowerCase()}-page`}>
                         {content}
-                     </MemoContent>
+                     </Content>
                   );
                })}
             </main>

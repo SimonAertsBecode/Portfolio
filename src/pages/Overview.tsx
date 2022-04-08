@@ -6,8 +6,8 @@ const titleAnimation = {
       y: 0,
       opacity: 0.9,
       transition: {
-         duration: 2,
-         delay: i * 0.2,
+         duration: 1,
+         delay: i * 0.1,
       },
    }),
    hidden: {
