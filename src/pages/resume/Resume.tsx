@@ -4,8 +4,8 @@ import { useContext } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/ai';
 
 //** Components import */
-import Skills from '../components/subComponents/Skills';
-import { UseStateContext } from '../context/UseStateContext';
+import Skills from './Skills';
+import { UseStateContext } from '../../context/UseStateContext';
 
 const Curriculum = () => {
    const skillsContext = useContext(UseStateContext);

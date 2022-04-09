@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Curriculum from '../pages/Resume';
-import Overview from '../pages/Overview';
+import Curriculum from '../pages/resume/Resume';
+import Overview from '../pages/home/Overview';
 import Pagination from './Pagination';
-import Projects from '../pages/Projects';
+import Projects from '../pages/projects/Projects';
 import Content from './Content';
 
 interface itemAnimation {
@@ -22,10 +22,6 @@ const LandingPage = () => {
       { title: 'Overview', content: <Overview /> },
       { title: 'Projects', content: <Projects /> },
    ];
-
-   window.addEventListener('load', () => {
-      console.log('page loaded');
-   });
 
    const paginationLogic = (visible: itemAnimation, index: number) => {
       const isPositive = index < actviveBtn ? false : true;

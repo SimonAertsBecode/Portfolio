@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 type variantsInterface = {
@@ -25,10 +25,6 @@ interface props {
 }
 
 const Content: React.FC<props> = ({ className, variants, children }) => {
-   useEffect(() => {
-      console.log('render');
-   }, []);
-
    return (
       <motion.section initial='hidden' animate='visible' variants={variants} className={className}>
          {children}
