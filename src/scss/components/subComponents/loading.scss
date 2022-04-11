@@ -1,0 +1,11 @@
+.loading {
+   display: flex;
+   flex-direction: row;
+   gap: 0.2rem;
+   div {
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: white;
+      border-radius: 100%;
+   }
+}

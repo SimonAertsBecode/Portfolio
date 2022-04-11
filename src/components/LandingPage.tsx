@@ -15,7 +15,7 @@ interface itemAnimation {
 }
 
 const LandingPage = () => {
-   const [actviveBtn, setActiveBtn] = useState(1);
+   const [actviveBtn, setActiveBtn] = useState(2);
 
    const jsxComponents = [
       { title: 'Resume', content: <Curriculum /> },

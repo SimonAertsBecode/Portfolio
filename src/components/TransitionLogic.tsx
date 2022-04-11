@@ -15,7 +15,7 @@ const transitionVariant = {
    },
    exit: {
       opacity: 0,
-      transition: { duration: 2 },
+      transition: { duration: 1 },
    },
 };
 
@@ -24,7 +24,7 @@ const TransitionLogic = () => {
 
    setTimeout(() => {
       setTransition(true);
-   }, 3000);
+   }, 2000);
 
    return (
       <>

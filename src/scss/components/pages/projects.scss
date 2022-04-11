@@ -16,11 +16,62 @@
       border-radius: 100vw;
    }
 
-   .header {
-      a {
-         text-decoration: none;
-         color: thirdColor(1);
-         font-weight: bold;
+   h1 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+   }
+
+   ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      gap: 2rem;
+
+      li {
+         list-style-type: none;
+         width: 40%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: 1rem;
+         box-shadow: 0 0 1rem secondColor(0.6);
+
+         & > * {
+            text-align: center;
+         }
+
+         .header {
+            width: 100%;
+
+            .links {
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+               gap: 2rem;
+
+               a {
+                  padding: 0.5rem;
+                  border-radius: 2rem;
+                  text-decoration: none;
+                  color: thirdColor(1);
+                  font-weight: bold;
+                  background-color: fourthColor(1);
+               }
+            }
+         }
+
+         .description {
+            p {
+               text-align: justify;
+            }
+         }
       }
    }
 }
