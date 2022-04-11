@@ -19,7 +19,7 @@ const datas = [
    },
    {
       title: 'Login - Register - Contact form',
-      link: 'Not deployed yet',
+      link: false,
       sourceCode: 'https://github.com/SimonAertsBecode/Kinaccess',
       description:
          'The project was to build a fullstack login - logout - register - contact form. The in put validation are also fonctionnal, they were mainly set from the back end. Except for the date of birth validation that has been done in the front end.',
