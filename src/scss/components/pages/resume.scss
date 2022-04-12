@@ -20,7 +20,9 @@
 
       img {
          width: 70%;
-         border-radius: 88% 12% 34% 66% / 30% 30% 70% 70%;
+
+         border: 2px solid fourthColor(0.3);
+         padding: 0.3rem;
       }
 
       .social-links {

@@ -15,7 +15,7 @@ interface itemAnimation {
 }
 
 const LandingPage = () => {
-   const [actviveBtn, setActiveBtn] = useState(2);
+   const [actviveBtn, setActiveBtn] = useState(1);
 
    const jsxComponents = [
       { title: 'Resume', content: <Curriculum /> },
@@ -64,9 +64,16 @@ const LandingPage = () => {
                   const { visible } = animationVariants;
 
                   if (actviveBtn !== index) paginationLogic(visible, index);
-
+                  console.log(actviveBtn);
                   return (
-                     <Content key={title} variants={animationVariants} className={`${title.toLowerCase()}-page`}>
+                     <Content
+                        key={title}
+                        title={title}
+                        variants={animationVariants}
+                        className={`${title.toLowerCase()}-page`}
+                        setActiveBtn={setActiveBtn}
+                        index={index}
+                     >
                         {content}
                      </Content>
                   );

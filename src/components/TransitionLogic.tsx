@@ -20,7 +20,7 @@ const transitionVariant = {
 };
 
 const TransitionLogic = () => {
-   const [transition, setTransition] = useState(true);
+   const [transition, setTransition] = useState(false );
 
    setTimeout(() => {
       setTransition(true);
@@ -30,14 +30,7 @@ const TransitionLogic = () => {
       <>
          <AnimatePresence>
             {!transition ? (
-               <motion.section
-                  className='welcome-page'
-                  key='welcomePage'
-                  variants={transitionVariant}
-                  initial='hidden'
-                  animate='visible'
-                  exit='exit'
-               >
+               <motion.section className='welcome-page' key='welcomePage' variants={transitionVariant} initial='hidden' animate='visible' exit='exit'>
                   <p>Welcome on my portfolio</p>
                </motion.section>
             ) : (

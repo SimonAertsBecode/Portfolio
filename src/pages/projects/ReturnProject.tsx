@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from '../../animation/Loading';
+import LoadingAnimation from '../../animation/LoadingAnimation';
 
 interface projectDatas {
    title: string;
@@ -34,7 +34,7 @@ const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourc
          </section>
          <section className='description'>
             <p>{description}</p>
-            {inProgress && <Loading text='In progress' />}
+            {inProgress && <LoadingAnimation text='Still In Development' />}
          </section>
       </li>
    );
