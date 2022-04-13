@@ -64,7 +64,7 @@ const LandingPage = () => {
                   const { visible } = animationVariants;
 
                   if (actviveBtn !== index) paginationLogic(visible, index);
-                  console.log(actviveBtn);
+
                   return (
                      <Content
                         key={title}

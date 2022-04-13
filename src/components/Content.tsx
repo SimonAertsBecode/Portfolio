@@ -32,10 +32,9 @@ const Content: React.FC<props> = ({ title, className, variants, children, setAct
    const skillsContext = useContext(UseStateContext);
 
    const handleClick = () => {
-      if (setActiveBtn && index) {
-         setActiveBtn(index);
-      }
       title === 'Resume' && skillsContext?.setShowSkills(true);
+      //needed to set index !== undefined otherwise the index value of 0 is considered as false
+      if (setActiveBtn && index !== undefined) setActiveBtn(index);
    };
 
    return (
