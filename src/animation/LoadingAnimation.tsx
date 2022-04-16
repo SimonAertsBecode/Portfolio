@@ -18,14 +18,14 @@ const loadingCircle = {
       y: '0%',
    },
    end: {
-      y: '100%',
+      y: '-100%',
    },
 };
 
 const loadingCircleTransition = {
    duration: 0.6,
    yoyo: Infinity,
-   //**Creates an error on transition, needs to be dig in */
+   //**Creates an error on transition, needs to be digged in */
    // repeatType: 'loop',
    ease: 'easeInOut',
 };

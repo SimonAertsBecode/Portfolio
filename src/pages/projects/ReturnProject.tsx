@@ -34,8 +34,8 @@ const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourc
          </section>
          <section className='description'>
             <p>{description}</p>
-            {inProgress && <LoadingAnimation text='Still In Development' />}
          </section>
+         {inProgress && <LoadingAnimation text='Still In Development' />}
       </li>
    );
 };
