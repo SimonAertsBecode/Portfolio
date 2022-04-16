@@ -1,12 +1,6 @@
+//*Component import
 @import './container.scss';
 @import './pagination.scss';
-@import './transitionLogic.scss';
 
 //**Pages import
-@import './pages/overview.scss';
-@import './pages/resume.scss';
-@import './pages/projects.scss';
-
-//** Subcomponents import
-@import './subComponents/skills.scss';
-@import './subComponents/loading.scss';
+@import './pages/index.scss';

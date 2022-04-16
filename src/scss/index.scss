@@ -1,3 +1,9 @@
-@import './components/configuration/root.scss';
-@import './components/configuration/config.scss';
+//*Config import
+@import './configuration/root.scss';
+@import './configuration/config.scss';
+
+//*Animation import
+@import './animation/index.scss';
+
+//*component import
 @import './components/index.scss';
