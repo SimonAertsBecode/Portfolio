@@ -28,7 +28,7 @@
       .social-links {
          display: flex;
          flex-direction: row;
-         justify-content: space-around;
+         justify-content: space-evenly;
          gap: 2rem;
 
          a {
@@ -94,22 +94,34 @@
       }
 
       .experience {
-         display: table;
-         border-spacing: 1.5rem;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         gap: 2rem;
 
          & > section {
-            display: table-cell;
-            padding: 0 1rem;
+            padding: 1rem;
             box-shadow: 0 0 10px fourthColor(0.3);
+            min-height: fit-content;
+            flex: 1;
 
-            h4 {
-               font-size: 1.3rem;
-            }
-
-            h5 {
-               font-size: 1.1rem;
-               padding-bottom: 1rem;
+            .header {
                border-bottom: 1px solid fourthColor(0.4);
+               height: 150px;
+               display: flex;
+               flex-direction: column;
+
+               h4 {
+                  font-size: 1.3rem;
+                  margin-bottom: 0;
+                  flex: 1;
+               }
+
+               h5 {
+                  font-size: 1.1rem;
+                  margin-top: 0;
+               }
             }
 
             svg {
@@ -123,6 +135,7 @@
             }
          }
       }
+
       .education {
          display: flex;
          margin: auto;

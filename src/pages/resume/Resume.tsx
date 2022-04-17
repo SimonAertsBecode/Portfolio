@@ -30,8 +30,11 @@ const Curriculum = () => {
             <h2>Professional experience</h2>
             <section className='experience'>
                <section className='climact'>
-                  <h4>Internship as a React.js - Redux developer</h4>
-                  <h5>Climact</h5>
+                  <section className='header'>
+                     <h4>Internship as a React.js - Redux developer</h4>
+                     <h5>Climact</h5>
+                  </section>
+
                   <p>
                      05/2021 <AiOutlineArrowRight /> 10/2021
                   </p>
@@ -44,8 +47,11 @@ const Curriculum = () => {
                   </ul>
                </section>
                <section className='becode'>
-                  <h4>web developer intensive training</h4>
-                  <h5>BeCode</h5>
+                  <section className='header'>
+                     <h4>web developer intensive training</h4>
+                     <h5>BeCode</h5>
+                  </section>
+
                   <p>
                      01/2021 <AiOutlineArrowRight /> 08/2021
                   </p>
@@ -60,8 +66,11 @@ const Curriculum = () => {
                   </ul>
                </section>
                <section className='physiotherapy'>
-                  <h4>Physiotherapist</h4>
-                  <h5>few institutes</h5>
+                  <section className='header'>
+                     <h4>Physiotherapist</h4>
+                     <h5>few institutes</h5>
+                  </section>
+
                   <p>
                      01/2018 <AiOutlineArrowRight /> 08/2019
                   </p>
