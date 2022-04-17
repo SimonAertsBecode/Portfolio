@@ -1,6 +1,9 @@
 .projects {
    height: 100%;
-   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow-y: scroll;
 
    &::-webkit-scrollbar {
       width: 0.6rem;
@@ -28,64 +31,65 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: stretch;
+      width: 100%;
+      justify-content: space-evenly;
       gap: 2rem;
+      padding: 0;
 
       li {
-         .content {
-         }
-         position: relative;
          list-style-type: none;
-         width: 40%;
-         display: flex;
-         flex-direction: column;
-         justify-content: flex-start;
-         align-items: center;
+         flex: 40%;
          padding: 1rem;
          box-shadow: 0 0 1rem secondColor(0.6);
-
-         & > * {
-            text-align: center;
-         }
-
-         .header {
+         .body {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            flex: 1;
 
-            .links {
-               display: flex;
-               flex-direction: row;
-               justify-content: center;
-               align-items: center;
-               gap: 2rem;
+            & > * {
+               text-align: center;
+            }
 
-               a {
-                  padding: 0.5rem;
-                  border-radius: 2rem;
-                  text-decoration: none;
-                  color: thirdColor(1);
-                  font-weight: bold;
-                  background-color: fourthColor(1);
-               }
+            .header {
+               width: 100%;
 
-               p {
-                  font-size: 0.8rem;
-                  opacity: 0.5;
-                  width: 50%;
+               .links {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 2rem;
+
+                  a {
+                     padding: 0.5rem;
+                     border-radius: 2rem;
+                     text-decoration: none;
+                     color: thirdColor(1);
+                     font-weight: bold;
+                     background-color: fourthColor(1);
+                  }
+
+                  p {
+                     font-size: 0.8rem;
+                     opacity: 0.5;
+                     width: 50%;
+                  }
                }
             }
-         }
 
-         .description {
-            p {
-               text-align: justify;
+            .description {
+               p {
+                  text-align: justify;
+               }
             }
          }
 
          .loading {
             display: flex;
             justify-content: center;
-            position: absolute;
+            // position: absolute;
             bottom: 0;
             width: 100%;
             letter-spacing: 0.2rem;

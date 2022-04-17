@@ -13,27 +13,29 @@ interface projectDatas {
 const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourceCode, stack, inProgress }) => {
    return (
       <li>
-         <section className='header'>
-            <h3>{title}</h3>
-            <section className='links'>
-               {link ? (
-                  <a href={`${link}`} target='_blank' rel='noreferrer'>
-                     see project
-                  </a>
-               ) : (
-                  <p>Unfortunatly the project hasn't been deployed yet</p>
-               )}
-               {sourceCode ? (
-                  <a href={`${sourceCode}`} target='_blank' rel='noreferrer'>
-                     source code
-                  </a>
-               ) : (
-                  <p>I don't have access to the source code anymore</p>
-               )}
+         <section className='body'>
+            <section className='header'>
+               <h3>{title}</h3>
+               <section className='links'>
+                  {link ? (
+                     <a href={`${link}`} target='_blank' rel='noreferrer'>
+                        see project
+                     </a>
+                  ) : (
+                     <p>Unfortunatly the project hasn't been deployed yet</p>
+                  )}
+                  {sourceCode ? (
+                     <a href={`${sourceCode}`} target='_blank' rel='noreferrer'>
+                        source code
+                     </a>
+                  ) : (
+                     <p>I don't have access to the source code anymore</p>
+                  )}
+               </section>
             </section>
-         </section>
-         <section className='description'>
-            <p>{description}</p>
+            <section className='description'>
+               <p>{description}</p>
+            </section>
          </section>
          {inProgress && <LoadingAnimation text='Still In Development' />}
       </li>
