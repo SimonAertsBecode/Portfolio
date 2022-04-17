@@ -31,16 +31,17 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 100%;
+      width: 90%;
       justify-content: space-evenly;
       gap: 2rem;
       padding: 0;
 
       li {
          list-style-type: none;
-         flex: 40%;
+         flex: 1 1 40%;
          padding: 1rem;
          box-shadow: 0 0 1rem secondColor(0.6);
+
          .body {
             width: 100%;
             display: flex;
