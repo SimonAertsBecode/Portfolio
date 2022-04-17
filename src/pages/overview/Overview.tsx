@@ -17,9 +17,9 @@ const titleAnimation = {
 };
 
 const Overview = () => {
-   const renderTitle = () => {
-      const title = 'frontend - React developer';
-      const titleSplit = title.split('');
+   const renderTitle = (title: string) => {
+      const titleToRender = title;
+      const titleSplit = titleToRender.split('');
 
       return titleSplit.map((item, index) => {
          return (
@@ -34,7 +34,7 @@ const Overview = () => {
       <>
          <section className='overview'>
             <section className='head'>
-               <h1>{renderTitle()}</h1>
+               <h1>{renderTitle('frontend - React developer')}</h1>
                <h2>Simon Aerts</h2>
             </section>
             <section className='logo-animation'>

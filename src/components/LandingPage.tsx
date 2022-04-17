@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Curriculum from '../pages/resume/Resume';
-import Overview from '../pages/home/Overview';
+import Resume from '../pages/resume/Resume';
+import Overview from '../pages/overview/Overview';
 import Pagination from './Pagination';
 import Projects from '../pages/projects/Projects';
 import Content from './Content';
@@ -18,7 +18,7 @@ const LandingPage = () => {
    const [actviveBtn, setActiveBtn] = useState(1);
 
    const jsxComponents = [
-      { title: 'Resume', content: <Curriculum /> },
+      { title: 'Resume', content: <Resume /> },
       { title: 'Overview', content: <Overview /> },
       { title: 'Projects', content: <Projects /> },
    ];

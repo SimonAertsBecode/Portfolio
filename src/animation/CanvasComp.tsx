@@ -65,8 +65,9 @@ const Plane = () => {
 };
 
 const CanvasComp = () => {
+   //* property scroll to false, so size won't change when scrolling on different section 'Resume' and 'Projects'
    return (
-      <Canvas shadows camera={{ position: [5, 0, 5], fov: 3 }}>
+      <Canvas shadows={true} resize={{ scroll: false }} camera={{ position: [5, 0, 5], fov: 3 }}>
          <ambientLight intensity={0.1} />
          <directionalLight
             position={[5, 5, 4]}
@@ -78,8 +79,10 @@ const CanvasComp = () => {
             shadow-camera-left={-10}
          />
          <pointLight position={[1, 1, 0]} intensity={1} />
-         <ReactLogo />
-         <Plane />
+         <group>
+            <ReactLogo />
+            <Plane />
+         </group>
          <OrbitControls />
       </Canvas>
    );

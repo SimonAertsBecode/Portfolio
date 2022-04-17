@@ -7,7 +7,7 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/a
 import Skills from './Skills';
 import { UseStateContext } from '../../context/UseStateContext';
 
-const Curriculum = () => {
+const Resume = () => {
    const skillsContext = useContext(UseStateContext);
    let showSkills = skillsContext?.showSkills;
 
@@ -94,4 +94,4 @@ const Curriculum = () => {
    );
 };
 
-export default Curriculum;
+export default Resume;
