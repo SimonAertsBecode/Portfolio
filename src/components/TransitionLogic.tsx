@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LandingPage from './LandingPage';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -21,10 +21,28 @@ const transitionVariant = {
 
 const TransitionLogic = () => {
    const [transition, setTransition] = useState(false);
+   const [AxisValue, setAxisValue] = useState(0);
 
    setTimeout(() => {
       setTransition(true);
    }, 2000);
+
+   const handleScreenWidth = () => {
+      const { innerWidth: width } = window;
+      if (width <= 600) {
+         setAxisValue(80);
+      } else if (width <= 900) {
+         setAxisValue(60);
+      } else {
+         setAxisValue(50);
+      }
+   };
+
+   useEffect(() => {
+      handleScreenWidth();
+   }, []);
+
+   window.addEventListener('resize', handleScreenWidth);
 
    return (
       <>
@@ -34,7 +52,7 @@ const TransitionLogic = () => {
                   <p>Welcome on my portfolio</p>
                </motion.section>
             ) : (
-               <LandingPage />
+               <LandingPage responsiveValue={AxisValue} />
             )}
          </AnimatePresence>
       </>

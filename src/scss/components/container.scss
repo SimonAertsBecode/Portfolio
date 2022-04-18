@@ -39,3 +39,14 @@
       }
    }
 }
+
+//** Responsive scss
+@media only screen and (max-width: 600px) {
+   .container {
+      .content {
+         & > section {
+            width: 95vw;
+         }
+      }
+   }
+}

@@ -14,7 +14,7 @@ interface itemAnimation {
    };
 }
 
-const LandingPage = () => {
+const LandingPage = ({ responsiveValue = 50 }: { responsiveValue: number }) => {
    const [actviveBtn, setActiveBtn] = useState(1);
 
    const jsxComponents = [
@@ -33,7 +33,7 @@ const LandingPage = () => {
          scaleValue = 0.8 * diff;
       }
 
-      visible.x = !isPositive ? `-${diff * 50}vw` : `${diff * 50}vw`;
+      visible.x = !isPositive ? `-${diff * responsiveValue}vw` : `${diff * responsiveValue}vw`;
       visible.scale = scaleValue;
       visible.zIndex = diff === 2 ? 0 : diff;
    };

@@ -30,3 +30,15 @@
       width: 100%;
    }
 }
+
+//** responsive scss
+
+@media only screen and (max-width: 1050px) {
+   .overview {
+      .head {
+         h1 {
+            font-size: 2.2rem;
+         }
+      }
+   }
+}
