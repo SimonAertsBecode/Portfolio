@@ -4,8 +4,7 @@ Hello my name is Simon Aerts and you will find [here](https://portfolio-c9019.we
 
 The portfolio has been deployed on the 16/04 so **Please note that:**
 
--  The responsive version is in developpement, so the website is not supported on smaller screens for now.
--  The layout has still some issues that needs to be fixed.
+-  The responsive version is in developpement, so the website is not supported on screens like 'ipad' for now.
 -  Custom domain name is not set yet.
 
 ---
