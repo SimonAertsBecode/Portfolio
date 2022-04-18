@@ -11,8 +11,9 @@
    align-items: center;
 
    p {
-      color: white;
+      color: thirdColor(1);
       font-size: 3rem;
       text-transform: uppercase;
+      text-align: center;
    }
 }

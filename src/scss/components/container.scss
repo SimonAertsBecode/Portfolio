@@ -41,11 +41,20 @@
 }
 
 //** Responsive scss
+@media only screen and (max-width: 800px) {
+   .container {
+      .content {
+         & > section {
+            width: 85vw;
+         }
+      }
+   }
+}
 @media only screen and (max-width: 600px) {
    .container {
       .content {
          & > section {
-            width: 95vw;
+            width: 90vw;
          }
       }
    }

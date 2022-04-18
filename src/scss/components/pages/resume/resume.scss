@@ -4,7 +4,7 @@
    height: 100%;
 
    .basic-infos {
-      max-width: 20%;
+      min-width: 20%;
       border-right: 1px solid fourthColor(1);
       padding: 1rem;
       display: flex;
@@ -81,10 +81,11 @@
    .journey {
       display: flex;
       flex-direction: column;
+      align-items: center;
       padding: 1rem;
       width: 100%;
       max-height: 100%;
-      overflow-x: auto;
+      overflow-y: scroll;
 
       h2 {
          text-align: center;
@@ -96,7 +97,6 @@
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
-         justify-content: space-around;
          gap: 2rem;
 
          & > section {
@@ -137,11 +137,47 @@
 
       .education {
          display: flex;
-         margin: auto;
          width: 50%;
          flex-direction: column;
          justify-content: center;
-         align-items: flex-start;
+         align-items: center;
+
+         & > section {
+            text-align: center;
+         }
+      }
+   }
+}
+
+//** responsive design
+@media only screen and (max-width: 600px) {
+   .resume {
+      flex-direction: column;
+      overflow-y: scroll;
+
+      .basic-infos {
+         width: 100%;
+         border-right: none;
+         border-bottom: 1px solid fourthColor(1);
+         padding: 0 0 1rem 0;
+         img {
+            width: 40%;
+         }
+      }
+      .journey {
+         overflow-y: initial;
+         padding: 0;
+
+         .experience {
+            & > section {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               .header {
+                  align-items: center;
+               }
+            }
+         }
       }
    }
 }

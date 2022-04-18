@@ -20,7 +20,7 @@ const transitionVariant = {
 };
 
 const TransitionLogic = () => {
-   const [transition, setTransition] = useState(false);
+   const [transition, setTransition] = useState(true);
    const [AxisValue, setAxisValue] = useState(0);
 
    setTimeout(() => {

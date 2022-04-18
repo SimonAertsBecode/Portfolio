@@ -14,7 +14,7 @@ interface itemAnimation {
    };
 }
 
-const LandingPage = ({ responsiveValue = 50 }: { responsiveValue: number }) => {
+const LandingPage = ({ responsiveValue }: { responsiveValue: number }) => {
    const [actviveBtn, setActiveBtn] = useState(1);
 
    const jsxComponents = [
