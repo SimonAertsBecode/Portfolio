@@ -49,7 +49,7 @@ const TransitionLogic = () => {
          <AnimatePresence>
             {!transition ? (
                <motion.section className='welcome-page' key='welcomePage' variants={transitionVariant} initial='hidden' animate='visible' exit='exit'>
-                  <p>Welcome on my portfolio</p>
+                  <p>Welcome to my portfolio</p>
                </motion.section>
             ) : (
                <LandingPage responsiveValue={AxisValue} />
