@@ -22,7 +22,7 @@ const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourc
                         see project
                      </a>
                   ) : (
-                     <p>Unfortunatly the project hasn't been deployed yet</p>
+                     <p>the project hasn't been deployed yet</p>
                   )}
                   {sourceCode ? (
                      <a href={`${sourceCode}`} target='_blank' rel='noreferrer'>

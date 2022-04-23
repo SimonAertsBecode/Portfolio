@@ -34,8 +34,14 @@ const Overview = () => {
       <>
          <section className='overview'>
             <section className='head'>
-               <h1>{renderTitle('frontend - React developer')}</h1>
-               <h2>Simon Aerts</h2>
+               <h1
+                  //Otherwise "\n" doesn't work
+                  style={{
+                     whiteSpace: 'pre-wrap',
+                  }}
+               >
+                  {renderTitle('frontend - React developer \nSimon Aerts')}
+               </h1>
             </section>
             <section className='logo-animation'>
                <CanvasComp />

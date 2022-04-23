@@ -3,7 +3,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
+   justify-content: flex-start;
    overflow-y: scroll;
 
    &::-webkit-scrollbar {
@@ -33,6 +33,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       width: 90%;
+      height: 100%;
       justify-content: space-evenly;
       gap: 2rem;
       padding: 0;

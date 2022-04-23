@@ -6,7 +6,8 @@
       margin: 10px 20px;
       padding: 0px;
       background-color: transparent;
-      color: white;
+      color: thirdColor(1);
+      opacity: 0.5;
       border: none;
       cursor: pointer;
       font-size: 2rem;
@@ -27,6 +28,7 @@
 
       &.active {
          transform: translateY(-20px) scale(1.2);
+         opacity: 1;
 
          &::before {
             transform: scaleX(1);
