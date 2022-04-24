@@ -1,6 +1,12 @@
 .pagination {
    display: flex;
    justify-content: center;
+   align-items: center;
+
+   svg {
+      color: thirdColor(0.8);
+      font-size: 4rem;
+   }
 
    button {
       margin: 10px 20px;

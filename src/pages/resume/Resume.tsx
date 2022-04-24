@@ -1,11 +1,12 @@
 import { useContext } from 'react';
+import { UseStateContext } from '../../context/UseStateContext';
 
 //** React realated import */
-import { AiFillGithub, AiFillLinkedin, AiOutlineArrowRight } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 //** Components import */
 import Skills from './Skills';
-import { UseStateContext } from '../../context/UseStateContext';
+import Experience from './Experience';
 
 const Resume = () => {
    const skillsContext = useContext(UseStateContext);
@@ -27,64 +28,44 @@ const Resume = () => {
             <section className='skills'>{showSkills && <Skills />}</section>
          </section>
          <section className='journey'>
+            <section className='description'>
+               <h2>A little bit about myself</h2>
+               <p>
+                  My name is Simon, I'm 27 years old and I'm originally from Belgium (Brussels to be precise). After graduating in physiotherapy I
+                  realised that it wasn't for me, so I did an intensive 11 months training course at BeCode (including internship). Since then, I
+                  continue to learn the whole React/Javascript-Typescript ecosystem by myself by working on projects that can be found on my github
+                  page and portfolio. I've been in the web development univers for about a year and a half now and I love it.
+               </p>
+            </section>
             <h2>Professional experience</h2>
             <section className='experience'>
-               <section className='climact'>
-                  <section className='header'>
-                     <h4>Internship as a React.js - Redux developer</h4>
-                     <h5>Climact</h5>
-                  </section>
-
-                  <p>
-                     05/2021 <AiOutlineArrowRight /> 10/2021
-                  </p>
-                  <ul>
-                     <li>React</li>
-                     <li>Redux</li>
-                     <li>Scss</li>
-                     <li>REST API</li>
-                     <li>ApexChart.js</li>
-                  </ul>
-               </section>
-               <section className='becode'>
-                  <section className='header'>
-                     <h4>web developer intensive training</h4>
-                     <h5>BeCode</h5>
-                  </section>
-
-                  <p>
-                     01/2021 <AiOutlineArrowRight /> 08/2021
-                  </p>
-
-                  <ul>
-                     <li>React</li>
-                     <li>JavaScript</li>
-                     <li>Scss</li>
-                     <li>REST API</li>
-                     <li>Node.js</li>
-                     <li>MongoDB</li>
-                  </ul>
-               </section>
-               <section className='physiotherapy'>
-                  <section className='header'>
-                     <h4>Physiotherapist</h4>
-                     <h5>few institutes</h5>
-                  </section>
-
-                  <p>
-                     01/2018 <AiOutlineArrowRight /> 08/2019
-                  </p>
-                  <p>Physiotherapist's specific skills</p>
-               </section>
+               <Experience
+                  title='Internship as a React.js - Redux developer'
+                  place='climact'
+                  dates={['05/2021', '10/2021']}
+                  stacks={['React', 'Redux', 'Scss', 'REST API', 'ApexChart.js']}
+               />
+               <Experience
+                  title='Web developer intensive training'
+                  place='becode'
+                  dates={['01/2021', '08/2021']}
+                  stacks={['React', 'JavaScript', 'TypeScript', 'Scss', 'Node.js', 'MongoDB', 'REST API']}
+               />
+               <Experience
+                  title='Physiotherapist'
+                  place='few institutes'
+                  dates={['01/2018', '08/2019']}
+                  stacks={["physiotherapist's specific skills"]}
+               />
             </section>
             <h2>Education</h2>
             <section className='education'>
-               <section className='--becode'>
+               <section className='becode'>
                   <h3>Certification as web developer BeCode</h3>
                   <p>01/2021 - 08/2021</p>
                </section>
 
-               <section className='--physiotherapy'>
+               <section className='physiotherapy'>
                   <h3>Master in physiotherapy</h3>
                   <p>2015 - 2019</p>
                </section>

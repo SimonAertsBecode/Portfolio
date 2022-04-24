@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useContext } from 'react';
 import { UseStateContext } from '../context/UseStateContext';
+// import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 interface props {
    jsxComponents: components[];

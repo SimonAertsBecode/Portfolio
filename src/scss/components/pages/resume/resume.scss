@@ -87,6 +87,16 @@
       max-height: 100%;
       overflow-y: scroll;
 
+      .description {
+         p {
+            width: 80%;
+            line-height: 1.4rem;
+            text-transform: uppercase;
+            text-align: justify;
+            margin-inline: auto;
+         }
+      }
+
       h2 {
          text-align: center;
          text-transform: uppercase;
