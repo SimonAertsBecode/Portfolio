@@ -1,6 +1,6 @@
 # My frontend - React portfolio
 
-Hello my name is Simon Aerts and you will find [here](https://www.simonaertsportfolio.com/) my Frontend - React portfolio.
+Hello my name is Simon Aerts and you will find [here](https://simonaertsportfolio.com/) my Frontend - React portfolio.
 
 The portfolio has been deployed on the 16/04 so **Please note that:**
 
