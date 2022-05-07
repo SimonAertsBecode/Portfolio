@@ -18,13 +18,19 @@ type stackObject = {
 };
 
 const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourceCode, stack, inProgress }) => {
+   const arrayToUserInterface = (array: string[]) => {
+      if (array.length >= 2) {
+         return array.map((item, index) => (index === 0 ? item : `  ${item}`));
+      }
+   };
+
    const isStackAnArray = () => {
       if (Array.isArray(stack)) {
          return stack.map((item) => <li key={item}>{item}</li>);
       } else {
          const stackEntries = Object.entries(stack);
          return stackEntries.map((entrie) => {
-            return <li>{`${entrie[0]} : ${entrie[1]}`}</li>;
+            return <li key={entrie[0]}>{`${entrie[0]} : ${Array.isArray(entrie[1]) ? arrayToUserInterface(entrie[1]) : entrie[1]}`}</li>;
          });
       }
    };
@@ -55,7 +61,7 @@ const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourc
                <p>{description}</p>
             </section>
             <section className='stack'>
-               <h2>Stacks used for the project</h2>
+               <h2>Stack used for the project</h2>
                <ul>{isStackAnArray()}</ul>
             </section>
          </section>

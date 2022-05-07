@@ -94,6 +94,21 @@
                   text-align: justify;
                }
             }
+
+            .stack {
+               ul {
+                  margin-inline: auto;
+
+                  li {
+                     padding: 0.2rem;
+                     flex: 100%;
+                     margin: 0;
+                     background-color: green;
+                     display: flex;
+                     flex-direction: column;
+                  }
+               }
+            }
          }
 
          .loading {
