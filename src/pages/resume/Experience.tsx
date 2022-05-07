@@ -24,7 +24,7 @@ const Experience: React.FC<experienceDatas> = ({ title, place, dates, stacks }) 
          </p>
          <ul>
             {stacks.map((item) => (
-               <li>{item}</li>
+               <li key={item}>{item}</li>
             ))}
          </ul>
       </section>
