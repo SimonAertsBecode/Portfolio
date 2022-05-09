@@ -1,6 +1,9 @@
 import React from 'react';
 import LoadingAnimation from '../../animation/LoadingAnimation';
 
+//* CLass import
+import { useStringManipulation } from '../../utils/string';
+
 interface projectDatas {
    title: string;
    link: string | boolean;
@@ -30,7 +33,11 @@ const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourc
       } else {
          const stackEntries = Object.entries(stack);
          return stackEntries.map((entrie) => {
-            return <li key={entrie[0]}>{`${entrie[0]} : ${Array.isArray(entrie[1]) ? arrayToUserInterface(entrie[1]) : entrie[1]}`}</li>;
+            return (
+               <li key={entrie[0]}>{`${useStringManipulation.capitalizeFirstLetter(entrie[0])} : ${
+                  Array.isArray(entrie[1]) ? arrayToUserInterface(entrie[1]) : entrie[1]
+               }`}</li>
+            );
          });
       }
    };
@@ -56,9 +63,10 @@ const ReturnProject: React.FC<projectDatas> = ({ title, link, description, sourc
                      <p>I don't have access to the source code anymore</p>
                   )}
                </section>
-            </section>
-            <section className='description'>
-               <p>{description}</p>
+
+               <section className='description'>
+                  <p>{description}</p>
+               </section>
             </section>
             <section className='stack'>
                <h2>Stack used for the project</h2>

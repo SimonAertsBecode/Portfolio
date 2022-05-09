@@ -28,7 +28,7 @@
       margin: 0.5rem 0;
    }
 
-   ul {
+   & > ul {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -56,6 +56,7 @@
 
             .header {
                width: 100%;
+               height: 100%;
 
                .links {
                   display: flex;
@@ -85,28 +86,32 @@
                      width: 50%;
                   }
                }
-            }
 
-            .description {
-               display: flex;
-               justify-content: center;
-               p {
-                  text-align: justify;
+               .description {
+                  display: flex;
+                  justify-content: center;
+                  p {
+                     text-align: justify;
+                  }
                }
             }
 
             .stack {
+               margin-bottom: 2rem;
                ul {
                   margin-inline: auto;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                  align-items: center;
 
                   li {
                      padding-bottom: 0.5rem;
-                     flex: 100%;
+                     width: 70%;
+                     margin-inline: auto;
                      margin: 0;
                      box-shadow: none;
                      border-bottom: solid 1px thirdColor(0.2);
-                     display: flex;
-                     flex-direction: column;
                   }
                }
             }

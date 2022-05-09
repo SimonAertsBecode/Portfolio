@@ -1,6 +1,9 @@
 import React from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
+//* CLass import
+import { useStringManipulation } from '../../utils/string';
+
 interface experienceDatas {
    title: string;
    place: string;
@@ -9,15 +12,12 @@ interface experienceDatas {
 }
 
 const Experience: React.FC<experienceDatas> = ({ title, place, dates, stacks }) => {
-   const capitalizeFirstLetter = (string: string) => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-   };
 
    return (
       <section className={place}>
          <section className='header'>
             <h4>{title}</h4>
-            <h5>{capitalizeFirstLetter(title)}</h5>
+            <h5>{useStringManipulation.capitalizeFirstLetter(title)}</h5>
          </section>
          <p>
             {dates[0]} <AiOutlineArrowRight /> {dates[1]}
