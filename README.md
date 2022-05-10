@@ -2,10 +2,10 @@
 
 Hello my name is Simon Aerts and you will find [here](https://simonaertsportfolio.com/) my Frontend - React portfolio.
 
-The portfolio has been deployed on the 16/04 so **Please note that:**
+The portfolio has been recently deployed so **Please note that:**
 
 -  The responsive version is in developpement, so the website is not supported on screens like 'ipad' for now.
--  Custom domain name is not set yet.
+-  UI/UX needs some improvement in the different sections
 
 ---
 
