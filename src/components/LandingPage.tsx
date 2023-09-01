@@ -24,7 +24,7 @@ const LandingPage = ({ responsiveValue }: { responsiveValue: number }) => {
    ];
 
    const paginationLogic = (visible: itemAnimation, index: number) => {
-      const isPositive = index < actviveBtn ? false : true;
+      const isPositive = index < actviveBtn;
       const diff = Math.abs(actviveBtn - index);
 
       let scaleValue = (0.8 * diff) % (diff - 1);

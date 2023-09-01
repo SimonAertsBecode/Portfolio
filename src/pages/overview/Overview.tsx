@@ -23,7 +23,13 @@ const Overview = () => {
 
       return titleSplit.map((item, index) => {
          return (
-            <motion.span key={index} initial='hidden' animate='visible' variants={titleAnimation} custom={index}>
+            <motion.span
+               key={index}
+               initial='hidden'
+               animate='visible'
+               variants={titleAnimation}
+               custom={index}
+            >
                {item}
             </motion.span>
          );
@@ -35,7 +41,6 @@ const Overview = () => {
          <section className='overview'>
             <section className='head'>
                <h1
-                  //Otherwise "\n" doesn't work
                   style={{
                      whiteSpace: 'pre-wrap',
                   }}

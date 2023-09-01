@@ -7,13 +7,6 @@ const Routes = () => {
    return (
       <Routing>
          <Route index element={<TransitionLogic />} />
-         <Route
-            path='github-account'
-            element={() => {
-               window.location.replace('https://github.com/SimonAertsBecode');
-               return null;
-            }}
-         />
       </Routing>
    );
 };

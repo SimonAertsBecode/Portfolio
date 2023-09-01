@@ -2,7 +2,6 @@ import { Suspense, useRef } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as three from 'three';
-import { softShadows } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 /*
@@ -26,8 +25,6 @@ Mesh
 
 */
 
-softShadows();
-
 //** React gltf created with vectary */
 const ReactLogoGltf = () => {
    const gltf = useLoader(GLTFLoader, '/assets/gltf/portfolio.glb');
@@ -39,7 +36,7 @@ const ReactLogoGltf = () => {
 };
 
 const ReactLogo = () => {
-   const reactGltf = useRef<three.Mesh>();
+   const reactGltf = useRef<three.Mesh | null>(null);
 
    useFrame(() => {
       reactGltf.current!.rotation.x += 0.003;
@@ -57,8 +54,13 @@ const Plane = () => {
    const plane = useRef<three.Mesh>(null);
 
    return (
-      <mesh ref={plane} rotation={[-Math.PI / 2, 0, 0]} position={[0, -4, 0]} receiveShadow>
-         <planeBufferGeometry attach='geometry' args={[100, 100]} />
+      <mesh
+         ref={plane}
+         rotation={[-Math.PI / 2, 0, 0]}
+         position={[0, -4, 0]}
+         receiveShadow
+      >
+         <planeGeometry attach='geometry' args={[100, 100]} />
          <shadowMaterial attach='material' color='red' opacity={0.2} />
       </mesh>
    );
@@ -67,7 +69,11 @@ const Plane = () => {
 const CanvasComp = () => {
    //* property scroll to false, so size won't change when scrolling on different section 'Resume' and 'Projects'
    return (
-      <Canvas shadows={true} resize={{ scroll: false }} camera={{ position: [5, 0, 5], fov: 3 }}>
+      <Canvas
+         shadows={true}
+         resize={{ scroll: false }}
+         camera={{ position: [5, 0, 5], fov: 3 }}
+      >
          <ambientLight intensity={0.1} />
          <directionalLight
             position={[5, 5, 4]}
